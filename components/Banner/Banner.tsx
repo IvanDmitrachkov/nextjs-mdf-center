@@ -1,6 +1,6 @@
 import React from 'react'
 import BgImage from 'components/BgImage/BgImage'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { FaInstagram, FaVk, FaWhatsapp } from 'react-icons/fa'
 
@@ -25,10 +25,12 @@ const Banner = ({
   return (
     <BgImage image={image}>
       <div className='flex flex-col justify-between h-700'
-           style={{ background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.108083) 35.21%, rgba(0, 0, 0, 0.86) 100%)' }}>
+           style={{ background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.108083) 35.21%, rgba(0, 0, 0, 0.86) 100%)' }}
+      >
               <span>
                   <div
-                    className='sm:hidden h-64 flex justify-between items-center wrapper text-18 text-white sm:text-16 sm:flex-col sm:justify-center sm:items-start'>
+                    className='sm:hidden h-64 flex justify-between items-center wrapper text-18 text-white sm:text-16 sm:flex-col sm:justify-center sm:items-start'
+                  >
                       <div>{topLeft}</div>
                       <div>{contacts?.address}</div>
                   </div>

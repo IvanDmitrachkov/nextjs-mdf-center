@@ -2,7 +2,7 @@
 import React from 'react'
 import _ from 'lodash'
 import CardFacade from 'components/CardFacade/CardFacade'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { ANCHOR_FACADES } from 'constants/anchors'
 import { PAGE_PRICES } from 'constants/PAGES'
@@ -11,7 +11,7 @@ import Link from 'components/Link/Link'
 
 const HomeFacades = () => {
   const { data: facadeList } = useQuery(
-    'home-facades',
+    ['home-facades'],
     async () => {
       const { data } = await axios.get('api/home-facades.json')
       return data

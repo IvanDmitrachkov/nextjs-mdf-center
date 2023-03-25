@@ -1,6 +1,6 @@
 // packages
 import React from 'react'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import Banner from 'components/Banner/Banner'
 import BigSlider from 'components/BigSlider/BigSlider'
@@ -12,14 +12,14 @@ import Head from 'next/head'
 
 const HomePage = () => {
   const { data: banner } = useQuery(
-    'banner-home',
+    ['banner-home'],
     async () => {
       const { data } = await axios.get('api/banner.json')
       return data
     })
 
   const { data: slides } = useQuery(
-    'home-slides',
+    ['home-slides'],
     async () => {
       const { data } = await axios.get('api/home-slides.json')
       return data

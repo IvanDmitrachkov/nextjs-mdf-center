@@ -1,16 +1,12 @@
 .container {
-  h2 {
-    @apply text-32 mt-64 mb-32 font-medium;
-  }
-
-  h3 {
-    @apply text-24 mt-40 mb-24 font-medium;
-
-  }
 
   table {
     border-spacing: 0;
     width: 100%;
+
+  tr:last-child td {
+    border: none;
+  }
 
     th {
       font-size: 1.6rem;

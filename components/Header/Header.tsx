@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { ANCHOR_CONTACTS, ANCHOR_FACADES, ANCHOR_SERVICES } from 'constants/anchors'
 import { scrollWindowTo } from 'utils/scrollWindowTo'
 import { PAGE_MAIN, PAGE_PRICES } from 'constants/PAGES'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import Link from 'components/Link/Link'
 

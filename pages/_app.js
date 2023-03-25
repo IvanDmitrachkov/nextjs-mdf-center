@@ -1,7 +1,6 @@
 import 'styles/roboto/stylesheet.css'
 import 'styles/global.css'
-import { QueryClient, QueryClientProvider } from 'react-query'
-import { Hydrate } from 'react-query/hydration'
+import { QueryClient, QueryClientProvider, Hydrate } from '@tanstack/react-query'
 import React from 'react'
 import Header from 'components/Header/Header'
 import Footer from 'components/Footer/Footer'
