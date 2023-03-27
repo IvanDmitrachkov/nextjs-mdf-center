@@ -2,13 +2,13 @@
 import React from 'react'
 import _ from 'lodash'
 import CardService from 'components/CardService/CardService'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { ANCHOR_SERVICES } from 'constants/anchors'
 
 const HomeServices = () => {
   const { data: services } = useQuery(
-    'home-services',
+    ['home-services'],
     async () => {
       const { data } = await axios.get('api/home-services.json')
       return data

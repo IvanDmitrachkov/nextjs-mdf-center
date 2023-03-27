@@ -1,6 +1,6 @@
 // packages
 import React, { useMemo } from 'react'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { FaVk, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import { MdEmail, MdLocationOn } from 'react-icons/md'
