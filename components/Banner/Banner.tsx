@@ -17,7 +17,7 @@ const Banner = ({
   title,
   text
 }: IBanner) => {
-  const { data: contacts } = useQuery('contacts', async () => {
+  const { data: contacts } = useQuery(['contacts'], async () => {
     const { data } = await axios.get('api/contacts.json')
     return data
   })

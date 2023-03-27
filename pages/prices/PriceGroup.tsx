@@ -5,10 +5,10 @@ const PriceGroup = ({ products, title }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   // показывать ли кнопку показать еще
-  const showButtonAll = products.length > 3
+  const showButtonAll = products?.length > 3
 
   // видимые продукты
-  const visibleProducts = (isOpen && showButtonAll) ? products : products.slice(0, 3)
+  const visibleProducts = (isOpen && showButtonAll) ? products : products?.slice(0, 3)
 
   return (
         <div className='mb-100'>
@@ -23,7 +23,7 @@ const PriceGroup = ({ products, title }) => {
                 </thead>
                 <tbody>
                 {
-                    visibleProducts.map((product, prodKey) => (
+                    visibleProducts?.map((product, prodKey) => (
                         <tr key={prodKey}>
                             <td dangerouslySetInnerHTML={{ __html: product.title }}/>
                             <td>{product.price}</td>
