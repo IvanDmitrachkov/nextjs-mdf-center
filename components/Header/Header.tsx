@@ -35,7 +35,7 @@ const Header = () => {
     }
   }, [])
 
-  const { data: contacts } = useQuery('contacts', async () => {
+  const { data: contacts } = useQuery(['contacts'], async () => {
     const { data } = await axios.get('api/contacts.json')
     return data
   })
@@ -46,7 +46,7 @@ const Header = () => {
         <div className='wrapper h-80 flex items-center text-24'>
           <Link href={PAGE_MAIN}>
             <a className='font-bold flex items-center' >
-            <img className='h-64 mr-16' src='/logo.png' />
+            <img alt='Фасады сысолы' className='h-64 mr-16' src='/logo.png' />
             Фасады Сысолы
             </a>
           </Link>

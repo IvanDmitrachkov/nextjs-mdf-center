@@ -9,7 +9,7 @@ import { ANCHOR_CONTACTS } from 'constants/anchors'
 
 const HowBuy = () => {
   const { data: contacts = {} } = useQuery(
-    'contacts',
+    ['contacts'],
     async () => {
       const { data } = await axios.get('api/contacts.json')
       return data

@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const Footer = () => {
   const { data: contacts = {} } = useQuery(
-    'contacts',
+    ['contacts'],
     async () => {
       const { data } = await axios.get('api/contacts.json')
       return data
