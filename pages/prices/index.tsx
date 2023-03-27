@@ -6,7 +6,7 @@ import axios from 'axios'
 import css from 'pages/prices/pagePrices.module.css'
 import cn from 'classnames'
 import PriceGroup from './PriceGroup'
-import { IconDownload } from './IconDownload'
+import IconDownload from '../../components/icons/IconDownload'
 
 const PagePrices = () => {
   const { data: banner } = useQuery(
