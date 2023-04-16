@@ -4,10 +4,10 @@ import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import Banner from 'components/Banner/Banner'
 import BigSlider from 'components/BigSlider/BigSlider'
-import HomeFacades from 'pages/home/HomeFacades/HomeFacades'
-import HomeServices from 'pages/home/HomeServices/HomeServices'
+import HomeFacades from 'containers/home/HomeFacades/HomeFacades'
+import HomeServices from 'containers/home/HomeServices/HomeServices'
 import HowBuy from 'components/HowBuy/HowBuy'
-import HomeAdvantages from 'pages/home/HomeAdvantages/HomeAdvantages'
+import HomeAdvantages from 'containers/home/HomeAdvantages/HomeAdvantages'
 import Head from 'next/head'
 
 const HomePage = () => {
