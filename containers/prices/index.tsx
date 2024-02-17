@@ -53,7 +53,7 @@ const PagePrices = () => {
                         ))}
                     </div>
                     <div className='mt-64 w-1/3 pl-80 md:pl-40 sm:w-full sm:pl-0'>
-                        <a className='text-18 flex items-center sticky top-100 hover:text-gray' href='/files/prays-tekhnichka.docx'>
+                        <a className='text-18 flex items-center sticky top-100 hover:text-gray' href='/files/Prays-tekhnichka.docx'>
                             <IconDownload />
                             Скачать файлом
                         </a>
