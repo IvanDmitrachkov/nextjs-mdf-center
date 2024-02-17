@@ -6,6 +6,7 @@ import { PAGE_MAIN, PAGE_PRICES } from 'constants/PAGES'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import Link from 'components/Link/Link'
+import { useRouter } from 'next/router'
 
 const scroll = () => {
   const scrollTop = window.scrollY
@@ -22,12 +23,19 @@ const scroll = () => {
   }
 }
 
-const handleClick = e => {
-  const { value } = e.target
-  scrollWindowTo(value)
-}
-
 const Header = () => {
+  const router = useRouter()
+
+  const handleClick = async e => {
+    // если это не главная страница, то сначала переходим на главную
+    if (router.pathname !== '/') {
+      await router.push('/')
+    }
+
+    const { value } = e.target
+    scrollWindowTo(value)
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', scroll)
     return () => {
